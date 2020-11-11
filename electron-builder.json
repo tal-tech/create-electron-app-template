@@ -1,0 +1,73 @@
+{
+  "appId": "com.my-app",
+  "productName": "My App",
+  "copyright": "Copyright © 2020 ${author}",
+  "directories": {
+    "buildResources": "resources",
+    "output": "release/${version}",
+    "app": "."
+  },
+  "buildVersion": "1.0.0",
+  "artifactName": "${productName}-${version}-${channel}.${ext}",
+  "files": [
+    "output",
+    "resources"
+  ],
+  "asar": false,
+  "forceCodeSigning": false,
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "",
+      "channel": "latest"
+    }
+  ],
+  "releaseInfo": {
+    "releaseName": "new release",
+    "releaseNotes": "1.aoisd;\n2.aisodj;\n"
+  },
+  "mac": {
+    "target": [
+      "dmg",
+      "zip"
+    ],
+    "icon": "resources/icon.icns",
+    "category": "public.app-category.developer-tools",
+    "hardenedRuntime": true,
+    "entitlements": "resources/entitlements.mac.plist",
+    "extendInfo": {
+      "NSMicrophoneUsageDescription": "请允许访问您的麦克风",
+      "NSCameraUsageDescription": "请允许访问您的摄像头"
+    }
+  },
+  "dmg": {
+    "background": "resources/background.jpg",
+    "iconSize": 128,
+    "iconTextSize": 13,
+    "window": {
+      "width": 900,
+      "height": 563
+    }
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }
+    ],
+    "icon": "resources/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "license": "resources/eula.txt",
+    "deleteAppDataOnUninstall": false,
+    "displayLanguageSelector": false
+  }
+}

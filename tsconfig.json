@@ -1,0 +1,32 @@
+// https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "importsNotUsedAsValues": "remove",
+    "paths": {
+      "app/*": ["app/*"],
+      "resources/*": ["resources/*"],
+    },
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true
+  },
+  "include": ["app/**/*"],
+  "exclude": [
+    "node_modules",
+    "packages",
+    "public",
+    "mock",
+    "example/*"
+  ]
+}

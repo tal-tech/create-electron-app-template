@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+
+/build/**
+/release/**
+/mock/**
+/output/**
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# node-waf configuration
+.lock-wscript
+
+# OSX
+.DS_Store
+
+.idea
+npm-debug.log.*
+__snapshots__
+
+# .d.ts
+/**/*.d.ts
+
+commitlint.config.js
+electron-builder.js

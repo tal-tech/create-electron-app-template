@@ -1,0 +1,11 @@
+.App {
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  padding: 12px;
+}
+
+.App button {
+  cursor: pointer;
+  margin-right: 12px;
+}
+
